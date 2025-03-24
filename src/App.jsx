@@ -5,6 +5,7 @@ import Counter from "./counter";
 import Users from "./user";
 import { Suspense } from "react";
 import Peoples from "./peoples";
+import Player from "./player";
 
 const fetchUser = fetch("https://jsonplaceholder.typicode.com/users").then(
   (response) => response.json()
@@ -61,6 +62,7 @@ function App() {
       <Suspense fallback={<h1>loading...</h1>}>
         <Users fetchUser={fetchUser}></Users>
       </Suspense>
+      <Player></Player>
     </>
   );
 }
